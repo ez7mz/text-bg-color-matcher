@@ -77,4 +77,4 @@ uvicorn main:app --reload
 
 ## Contribute
 
-For any suggestions or issues, please open an issue or contact me at [@NBGamer99](https://github.com/NBGamer99/) or [@ez7mz](https://github.com/ez7mz)
+For any suggestions or issues, please open an issue or contact us at [@NBGamer99](https://github.com/NBGamer99/), [@Hmesrar](mailto:hmesrar48@gmail.com), or[@ramo](https://github.com/OmarElHrr)
