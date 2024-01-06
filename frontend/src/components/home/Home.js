@@ -6,17 +6,15 @@ import Loader from "../loader/Loader";
 const Home = () => {
   const [bgSelectedColor, setBgSelectedColor] = useState("#000000");
   const [textSelectedColor, setTextSelectedColor] = useState("#ffffff");
-  const [response, setResponse] = useState("");
 
   const handleBgColorChange = async (event) => {
-    console.log(event.rgb);
     try {
       const response = await fetch("http://localhost:8000/api/v1/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ color: event.rgb }),
+        body: JSON.stringify({ hex: event.rgb }),
       });
 
       if (!response.ok) {
@@ -24,15 +22,18 @@ const Home = () => {
       }
 
       const data = await response.json();
-      setResponse(data.message);
+      if (!data) {
+        throw new Error("No data received");
+      }
+      handleTextColorChange(data.result);
     } catch (error) {
       console.error("Error:", error);
     }
     setBgSelectedColor(event.hex);
   };
 
-  const handleTextColorChange = (color) => {
-    setTextSelectedColor(color.hex);
+  const handleTextColorChange = (event) => {
+    setTextSelectedColor(event);
   };
 
   return (
