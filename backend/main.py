@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 class Message(BaseModel):
-    msg: str
+    color: dict
 
 # Set up CORS
 app.add_middleware(
@@ -26,5 +26,5 @@ async def read_root():
     return {"message": "Hello World from the API"}
 
 @app.post("/api/v1/predict/")
-async def read_root(message: Message):
-    return {"message": f"You sent: {message.msg}"}
+async def predict(color: Message):
+    return {"message": f"You sent: {color}"}

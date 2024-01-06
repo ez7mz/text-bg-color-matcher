@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Loader from "./loader/Loader";
 import './card.css';
 
 const Card = () => {
@@ -31,7 +32,8 @@ const Card = () => {
 
     return (
         <div className="card">
-            <img src="card-image.jpg" alt="Card" />
+            {/* <img src="card-image.jpg" alt="Card" /> */}
+            <Loader/>
             <div className="card-content">
                     <input type="text" placeholder="Enter text" name="msg" onChange={sendRequest} />
                     <p>{response}</p>
