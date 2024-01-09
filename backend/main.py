@@ -1,6 +1,3 @@
-from cgitb import reset
-from pyexpat import model
-from typing import Union
 from pydantic import BaseModel
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -46,7 +43,6 @@ async def predict(color: Message):
     r_value = color.hex['r']
     g_value = color.hex['g']
     b_value = color.hex['b']
-    print(color)
     result = ml_models["color_predictor"].predict_text_color([r_value, g_value, b_value])
     if r_value == None or g_value == None or b_value == None:
         return {"result": "error"}
