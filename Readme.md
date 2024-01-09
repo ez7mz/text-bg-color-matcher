@@ -40,13 +40,17 @@ This is a simple project to predict the color of text in case of a given backgro
    ```sh
    git clone
    ```
+2. It is recommended to use a virtual environment
+   ```sh
+   python -m venv venv
+   ```
 2. Install Python packages
    ```sh
    pip install -r requirements.txt
    ```
 3. Install Node packages
    ```sh
-   pnpm install
+   pnpm install or npm install
    ```
 
 
@@ -56,7 +60,7 @@ This is a simple project to predict the color of text in case of a given backgro
 
 To run the frontend, run the following command in the `frontend` directory:
 ```sh
-pnpm start
+pnpm start or npm start
 ```
 
 ### Backend
@@ -66,6 +70,19 @@ To run the backend, run the following command in the `backend` directory:
 ```sh
 uvicorn main:app --reload
 ```
+
+### RUN USING DOCKER
+
+run the following command in the root directory:
+
+```sh
+docker-compose up
+```
+
+
+### DEMO
+
+![demo](assets/demo.gif)
 
 
 ## Contribute
