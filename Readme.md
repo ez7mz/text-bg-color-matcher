@@ -7,12 +7,12 @@
 </h3>
 
   <p align="center">
-    Not recommended for dogs 🐶
+    It's like Tinder but for colors
     <br />
     <br />
     <a href="#contribute">Contribute</a>
     ·
-    <a href="">Report Bug</a>
+    <a href="https://github.com/ez7mz/text-bg-color-matcher/issues">Report Bug</a>
   </p>
 
 ![pytorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white) &emsp;
@@ -24,7 +24,7 @@
 
 
 
-This is a simple project to predict the color of text in case of a given background color. The project is divided into two parts: the frontend and the backend. The frontend is a simple React app that allows the user to select a color and the backend is a simple FastAPI app that uses a pre-trained model to predict the color of the text.
+This is a simple project to predict the color of text in case of a given background color. The project is divided into two parts: the frontend and the backend. The frontend is a simple React app that allows the user to select a color and the backend is a simple FastAPI app that uses a pre-trained (Home-made) model to predict the color of the text.
 
 
 ## Getting Started
@@ -71,7 +71,7 @@ To run the backend, run the following command in the `backend` directory:
 uvicorn main:app --reload
 ```
 
-### RUN USING DOCKER
+### RUN With Docker
 
 run the following command in the root directory:
 
@@ -87,4 +87,16 @@ docker-compose up
 
 ## Contribute
 
-For any suggestions or issues, please open an issue or contact us at [@NBGamer99](https://github.com/NBGamer99/), [@Hmesrar](mailto:hmesrar48@gmail.com), or[@ramo](https://github.com/OmarElHrr)
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Feel free to open a pull request or an issue.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+For any questions or suggestions, feel free to contact us:
+
+- Hamza Mesrar - [@ez7mz](https://hmesrar.netlify.app/)
+- Yasser Nabouzi - [@NBGamer99](https://www.github.com/NBGamer99)
+- Omar Elhariri - [@Ramo](https://github.com/OmarElHrr)
